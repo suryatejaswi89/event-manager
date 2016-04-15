@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "eventmanager",
+    "packageName": "com.towson.eventmanager",
+    "packageFolder": "com/towson/eventmanager",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": true,
+    "rememberMeKey": "190c3c065c74e1358d8ccb680d0d0dee9c1d9be4",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

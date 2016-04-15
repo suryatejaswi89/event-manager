@@ -1,0 +1,7 @@
+eventmanager-dev-mongodb:
+  container_name: eventmanager-dev-mongodb
+  image: mongo:3.0.7
+  # volumes:
+  #   - ~/volumes/jhipster/eventmanager/dev-mongodb/:/data/db/
+  ports:
+    - "27017:27017"

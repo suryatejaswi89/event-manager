@@ -1,0 +1,60 @@
+<div>
+    <h2 translate="eventmanagerApp.hall.home.title">Halls</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left" has-authority="ROLE_ADMIN">
+                <button class="btn btn-primary" ui-sref="hall.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="eventmanagerApp.hall.home.createLabel">Create new Hall
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="reset()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span translate="eventmanagerApp.hall.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="address"><span translate="eventmanagerApp.hall.address">Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="capacity"><span translate="eventmanagerApp.hall.capacity">Capacity</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
+                <tr ng-repeat="hall in halls track by hall.id">
+                    <td><a ui-sref="hall.detail({id:hall.id})">{{hall.id}}</a></td>
+                    <td>{{hall.name}}</td>
+                    <td>{{hall.address}}</td>
+                    <td>{{hall.capacity}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="hall.detail({id:hall.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="hall.edit({id:hall.id})"
+                                    class="btn btn-primary btn-sm"  has-authority="ROLE_ADMIN">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="hall.delete({id:hall.id})"
+                                    class="btn btn-danger btn-sm"  has-authority="ROLE_ADMIN">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
