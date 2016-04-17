@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('eventmanagerApp')
-    .controller('HallDetailController', function ($scope, $rootScope, $stateParams, entity, Hall) {
+    .controller('HallDetailController', function ($scope, $rootScope, $stateParams, entity, Hall,hallEvents) {
         $scope.hall = entity;
         $scope.load = function (id) {
             Hall.get({id: id}, function(result) {
@@ -13,18 +13,20 @@ angular.module('eventmanagerApp')
         });
         $scope.$on('$destroy', unsubscribe);
 
+        function dbEventsToUEvents(events){
+            var uEvents=[];
+            for(var i=0;i<events.length;i++){
+                var temp = {};
+                temp.title= events[i].name;
+                temp.start=events[i].startDate;
+                temp.end=events[i].endDate;
+                uEvents.push(temp);
+            }
+            return uEvents;
+        }
+
         $scope.eventSources = {
-            events: [
-                {
-                    title: 'Event1',
-                    start: 'Apr 12, 2016 12:12:00 PM'
-                },
-                {
-                    title: 'Event2',
-                    start: '2016-04-21'
-                }
-                // etc...
-            ]
+            events: dbEventsToUEvents(hallEvents.data)
         };
 
     });

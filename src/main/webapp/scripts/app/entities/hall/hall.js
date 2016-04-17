@@ -44,6 +44,9 @@ angular.module('eventmanagerApp')
                     }],
                     entity: ['$stateParams', 'Hall', function($stateParams, Hall) {
                         return Hall.get({id : $stateParams.id});
+                    }],
+                    hallEvents: ['$stateParams', '$http', function($stateParams, $http) {
+                        return $http({method: 'GET', url: '/api/events/atvenue/'+$stateParams.id});
                     }]
                 }
             })
