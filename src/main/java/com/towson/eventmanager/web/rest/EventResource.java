@@ -113,4 +113,19 @@ public class EventResource {
         eventRepository.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert("event", id.toString())).build();
     }
+    
+    /**
+     * GET  /events -> get all the events at a given venue
+     */
+    @RequestMapping(value = "/events/atvenue/{venueid}",
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public ResponseEntity<List<Event>> getAllEventsAt(@PathVariable String venueid, Pageable pageable)
+        throws URISyntaxException {
+        log.debug("REST request to get a page of Events");
+        Page<Event> page = eventRepository.findByVenue(venueid,pageable); 
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/events/atvenue");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
 }

@@ -13,4 +13,18 @@ angular.module('eventmanagerApp')
         });
         $scope.$on('$destroy', unsubscribe);
 
+        $scope.eventSources = {
+            events: [
+                {
+                    title: 'Event1',
+                    start: 'Apr 12, 2016 12:12:00 PM'
+                },
+                {
+                    title: 'Event2',
+                    start: '2016-04-21'
+                }
+                // etc...
+            ]
+        };
+
     });

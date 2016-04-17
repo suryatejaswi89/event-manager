@@ -51,6 +51,19 @@
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
                             </button>
+
+                            <button type="submit"
+                                    ui-sref="event.new({id:hall.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm">Create Event</span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="event({hallid:hall.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm">View Events</span>
+                            </button>
                         </div>
                     </td>
                 </tr>

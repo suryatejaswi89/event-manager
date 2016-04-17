@@ -5,7 +5,7 @@ angular.module('eventmanagerApp')
         $stateProvider
             .state('event', {
                 parent: 'entity',
-                url: '/events',
+                url: '/events/:hallid?',
                 data: {
                     authorities: ['ROLE_USER'],
                     pageTitle: 'eventmanagerApp.event.home.title'
@@ -49,9 +49,9 @@ angular.module('eventmanagerApp')
             })
             .state('event.new', {
                 parent: 'event',
-                url: '/new',
+                url: '/{id}/new',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_USER']
                 },
                 onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                     $uibModal.open({
@@ -62,7 +62,7 @@ angular.module('eventmanagerApp')
                             entity: function () {
                                 return {
                                     name: null,
-                                    venue: null,
+                                    venue: $stateParams.id||null,
                                     startDate: null,
                                     endDate: null,
                                     id: null
