@@ -275,3 +275,24 @@ Social Buttons
 /* jhipster-needle-scss-add-main JHipster will add new css style */
 
 /* jhipster-needle-css-add-main JHipster will add new css style */
+
+.well{
+    background-color:transparent;
+    border:transparent;
+}
+
+.footer {
+    background-color: #26b864;
+    color: white;
+    padding: 25px 0;
+}
+.footer a {
+    color: white;
+}
+.footer span {
+    margin-top: 12px;
+    display: block;
+}
+.navbar {
+    margin-bottom: 0;
+}

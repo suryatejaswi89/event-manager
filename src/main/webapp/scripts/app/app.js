@@ -81,7 +81,7 @@ angular.module('eventmanagerApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'p
         //Cache everything except rest api requests
         httpRequestInterceptorCacheBusterProvider.setMatchlist([/.*api.*/, /.*protected.*/], true);
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/login');
         $stateProvider.state('site', {
             'abstract': true,
             views: {

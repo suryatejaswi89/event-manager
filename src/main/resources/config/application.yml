@@ -32,8 +32,8 @@ spring:
 
         # see https://developers.facebook.com/docs/facebook-login/v2.2
         facebook:
-            clientId: xxx
-            clientSecret: xxx
+            clientId: 639378212882713
+            clientSecret: 3110168c30527e0a9326ba58a29ce598
 
         # see https://apps.twitter.com/app/
         twitter:
@@ -63,7 +63,7 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
-        from: eventmanager@localhost
+        from: tiru67@gmail.com
     security:
         rememberme:
             # security key (this key should be unique for your application, and kept secret)
