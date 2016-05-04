@@ -71,7 +71,7 @@ Browser Upgrade Prompt
     display: inline-block;
     width: 347px;
     height: 497px;
-    background: url("../images/slider/slide1.jpg") no-repeat center top;
+    background: url("../images/EK_home.jpeg") no-repeat center top;
     background-size: contain;
 }
 
@@ -87,7 +87,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
     .hipster {
-        background: url("../images/slider/slide3.jpg") no-repeat center top;
+        background: url("../images/EK_home2x.jpeg") no-repeat center top;
         background-size: contain;
     }
 }
@@ -283,7 +283,7 @@ Social Buttons
 }
 
 .footer {
-    background-color: #26b864;
+    background-color: #4AA7D7;
     color: white;
     padding: 25px 0;
 }
@@ -299,7 +299,7 @@ Social Buttons
 }
 
 .navbar-default {
-    background-color: #00BCD4;
+    background-color: #2893D5;
     border-color: #00BCD4;
 }
 
@@ -316,4 +316,8 @@ Social Buttons
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555;
     background-color: #FAFAFA;
+}
+
+.navbar-default .navbar-nav > li > a,.navbar-default .navbar-brand {
+    color: #FAFAFA;
 }
