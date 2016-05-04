@@ -71,7 +71,7 @@ Browser Upgrade Prompt
     display: inline-block;
     width: 347px;
     height: 497px;
-    background: url("../images/hipster.png") no-repeat center top;
+    background: url("../images/slider/slide1.jpg") no-repeat center top;
     background-size: contain;
 }
 
@@ -87,7 +87,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
     .hipster {
-        background: url("../images/hipster2x.png") no-repeat center top;
+        background: url("../images/slider/slide3.jpg") no-repeat center top;
         background-size: contain;
     }
 }
@@ -279,6 +279,7 @@ Social Buttons
 .well{
     background-color:transparent;
     border:transparent;
+    min-height:40em;
 }
 
 .footer {
@@ -295,4 +296,24 @@ Social Buttons
 }
 .navbar {
     margin-bottom: 0;
+}
+
+.navbar-default {
+    background-color: #00BCD4;
+    border-color: #00BCD4;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #FAFAFA;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #FAFAFA;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #FAFAFA;
 }

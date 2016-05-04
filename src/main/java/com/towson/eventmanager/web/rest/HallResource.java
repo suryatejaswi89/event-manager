@@ -46,7 +46,6 @@ public class HallResource {
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
     public ResponseEntity<Hall> createHall(@RequestBody Hall hall) throws URISyntaxException {
-        log.debug("REST request to save Hall : {}", hall);
         if (hall.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("hall", "idexists", "A new hall cannot already have an ID")).body(null);
         }
