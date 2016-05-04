@@ -1,76 +1,26 @@
 # eventmanager
 
-This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).
+#Bootstrap 
+It is a css framework that makes the responsive web app development easy. The core idea of this framework is that any viewport can be divided into 12 columns and we tell that frame work that a container/div will extend to x number of columns out of 12. This x varies for a given device. In my development I considered the support for 3 devices. xs, sm, md. In the home page the container is divided into 2 portions targeting the medium devices and above. The for portion occupies 4 columns and second portion occupies 8 columns in the device wider than medium (797px)
 
-Before you can build this project, you must install and configure the following dependencies on your machine:
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
 
-1. [Node.js][]: We use Node to run a development web server and build the project.
-   Depending on your system, you can install Node either from source or as a pre-packaged bundle.
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
 
-After installing Node, you should be able to run the following command to install development tools (like
-[Bower][] and [BrowserSync][]). You will only need to run this command when dependencies change in package.json.
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
 
-    npm install
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { … }
 
-We use [Grunt][] as our build system. Install the grunt command-line tool globally with:
+@media (max-width: @screen-xs-max) { ... }
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
+@media (min-width: @screen-lg-min) { … }
 
-    npm install -g grunt-cli
+#AngularJS:
+AngularJS is a javascript framework which lets us write client-side web applications as if we had a smarter browser. It lets us use good old HTML as our template language and lets us extend HTML’s syntax to express your application’s components clearly and succinctly. It automatically synchronizes data from our UI (view) with our JavaScript objects (model) through 2-way data binding. To help us structure your application better and make it easy to test, AngularJS teaches the browser how to do dependency injection and inversion of control.
 
-Run the following commands in two separate terminals to create a blissful development experience where your browser
-auto-refreshes when files change on your hard drive.
-
-    mvn
-    grunt
-
-Bower is used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
-specifying a newer version in `bower.json`. You can also run `bower update` and `bower install` to manage dependencies.
-Add the `-h` flag on any command to see how you can use it. For example, `bower update -h`.
-
-# Building for production
-
-To optimize the eventmanager client for production, run:
-
-    mvn -Pprod clean package
-
-This will concatenate and minify CSS and JavaScript files. It will also modify `index.html` so it references
-these new files.
-
-To ensure everything worked, run:
-
-    java -jar target/*.war --spring.profiles.active=prod
-
-Then navigate to [http://localhost:8080](http://localhost:8080) in your browser.
-
-# Testing
-
-Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in `src/test/javascript` and can be run with:
-
-    grunt test
-
-
-
-# Continuous Integration
-
-To setup this project in Jenkins, use the following configuration:
-
-* Project name: `eventmanager`
-* Source Code Management
-    * Git Repository: `git@github.com:xxxx/eventmanager.git`
-    * Branches to build: `*/master`
-    * Additional Behaviours: `Wipe out repository & force clone`
-* Build Triggers
-    * Poll SCM / Schedule: `H/5 * * * *`
-* Build
-    * Invoke Maven / Tasks: `-Pprod clean package`
-* Post-build Actions
-    * Publish JUnit test result report / Test Report XMLs: `build/test-results/*.xml`
-
-[JHipster]: https://jhipster.github.io/
-[Node.js]: https://nodejs.org/
-[Bower]: http://bower.io/
-[Grunt]: http://gruntjs.com/
-[BrowserSync]: http://www.browsersync.io/
-[Karma]: http://karma-runner.github.io/
-[Jasmine]: http://jasmine.github.io/2.0/introduction.html
-[Protractor]: https://angular.github.io/protractor/
-# event-manager
+It also helps with server-side communication, taming async callbacks with promises and deferreds, and it makes client-side navigation and deeplinking with hashbang urls or HTML5 pushState a piece of cake. Best of all? It makes the web app development easier while forcing the us to adhere to quality coding standards.
